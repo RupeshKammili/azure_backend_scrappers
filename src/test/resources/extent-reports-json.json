@@ -1,0 +1,13 @@
+{
+  "theme": "DARK",
+  "encoding": "utf-8",
+  "protocol": "HTTPS",
+  "timelineEnabled": false,
+  "offlineMode": true,
+  "thumbnailForBase64": false,
+  "documentTitle": "Test Scrappers ",
+  "reportName": "Scrappers results for Twitter, Facebook and LinkedIn",
+  "timeStampFormat": "dd MM, yyyy HH:mm:ss a",
+  "js": "custom.js",
+  "css": "extent.css"
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [All Test Suite]">
+  <test thread-count="2" parallel="tests" name="ScrapperTests2(failed)">
+    <classes>
+      <class name="OG_image.ScrappersLinkedIn">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+          <include name="logLastLine"/>
+          <include name="LikedInLanding"/>
+          <include name="LinkedInPostInception" invocation-numbers="1 2 3"/>
+        </methods>
+      </class> <!-- OG_image.ScrappersLinkedIn -->
+    </classes>
+  </test> <!-- ScrapperTests2(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->

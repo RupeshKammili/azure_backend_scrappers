@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">-->
+<suite name="All Test Suite" parallel="tests" thread-count="2">
+	<test name="ScrapperTests">
+		<classes>
+			<class name="OG_image.ScrappersFacebook" />
+		</classes>
+	</test>
+
+	<!--<test name="ScrapperTests1">
+		<classes>
+			<class name="OG_image.ScrappersTwitter" />
+		</classes>
+	</test>-->
+
+	<test name="ScrapperTests2">
+		<classes>
+			<class name="OG_image.ScrappersLinkedIn" />
+		</classes>
+	</test>
+</suite>
