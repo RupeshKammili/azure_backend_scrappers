@@ -65,9 +65,18 @@ public class BaseTest extends EmailConfig {
 
         options.addArguments("start-maximized");
 
+        // NEW: Read EdgeDriver path from env variable and set system property
+        String edgeDriverPath = System.getenv("EDGEWEBDRIVER_PATH");
+        if (edgeDriverPath != null && !edgeDriverPath.isEmpty()) {
+            System.setProperty("webdriver.edge.driver", edgeDriverPath);
+            System.out.println("✅ Using EdgeDriver from path: " + edgeDriverPath);
+        } else {
+            System.out.println("⚠️ EDGEWEBDRIVER_PATH environment variable not set. Using default driver location.");
+        }
+
         WebDriver driver = new EdgeDriver(options);
         ((JavascriptExecutor) driver)
-                .executeScript("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})");
+                .executeScript("Object.defineProperty(navigator, 'webdriver', {get: () -> undefined})");
 
         Log.info("Browser session started...");
         setTdriver(driver);
