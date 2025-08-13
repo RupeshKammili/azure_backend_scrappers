@@ -59,5 +59,6 @@ jobs:
         with:
           app-name: 'backend-azscrapper'
           slot-name: 'Production'
-          package: '*.jar'
+          package: 'java-app/*.jar'
+
           
