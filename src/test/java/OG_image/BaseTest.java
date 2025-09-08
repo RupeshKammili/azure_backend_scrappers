@@ -6,10 +6,11 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import AbstarctComponents.Log;
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.*;
 
+import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -19,115 +20,105 @@ import java.util.Properties;
 
 public class BaseTest extends EmailConfig {
 
-    public static ThreadLocal<WebDriver> tdriver = new ThreadLocal<>();
+	public static ThreadLocal<WebDriver> tdriver = new ThreadLocal<>();
 
-    static ExtentReports reports;
-    static ExtentSparkReporter sparkReporter;
+	static ExtentReports reports;
+	static ExtentSparkReporter sparkReporter;
 
-    public static Properties prop;
+	public static Properties prop;
 
-    public static void setTdriver(WebDriver driver) {
-        tdriver.set(driver);
-    }
+	public static void setTdriver(WebDriver driver) {
 
-    public static WebDriver getDriver() {
-        return tdriver.get();
-    }
+		tdriver.set(driver);
+	}
 
-    @BeforeTest
-    public void beforeTest() throws Exception {
-        prop = new Properties();
-        try (InputStream input = getClass().getClassLoader().getResourceAsStream("Crendentials.properties")) {
-            if (input == null) {
-                System.out.println("❌ Unable to find Crendentials.properties in classpath");
-            } else {
-                prop.load(input);
-                System.out.println("✅ Loaded Crendentials.properties successfully");
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+	public static WebDriver getDriver() {
 
-        EdgeOptions options = new EdgeOptions();
+		return tdriver.get();
+	}
 
-        // Stealth options
-        options.addArguments("--disable-blink-features=AutomationControlled");
-        options.setExperimentalOption("excludeSwitches", Arrays.asList("enable-automation"));
-        options.setExperimentalOption("useAutomationExtension", false);
+	@BeforeTest
+	public void beforeTest() throws Exception {
 
-        // Optional: Use a real user agent
-        options.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                + "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36");
+		prop = new Properties();
+		try (InputStream input = getClass().getClassLoader().getResourceAsStream("Crendentials.properties")) {
+		    if (input == null) {
+		        System.out.println("❌ Unable to find Crendentials.properties in classpath");
+		    } else {
+		        prop.load(input);
+		        System.out.println("✅ Loaded Crendentials.properties successfully");
+		    }
+		} catch (IOException e) {
+		    e.printStackTrace();
+		}
+		
+		ChromeOptions options = new ChromeOptions();
 
-        options.addArguments("--headless=new"); // Use "--headless" for older versions
-        options.addArguments("--disable-gpu");
-        options.addArguments("--window-size=1920,1080");
+		// Stealth options
+		options.addArguments("--disable-blink-features=AutomationControlled");
+		options.setExperimentalOption("excludeSwitches", Arrays.asList("enable-automation"));
+		options.setExperimentalOption("useAutomationExtension", false);
 
-        options.addArguments("start-maximized");
+		// Optional: Use a real user agent
+		options.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+				+ "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36");
 
-        // NEW: Read EdgeDriver path from env variable and set system property
-        String edgeDriverPath = System.getenv("EDGEWEBDRIVER_PATH");
-        if (edgeDriverPath != null && !edgeDriverPath.isEmpty()) {
-            System.setProperty("webdriver.edge.driver", edgeDriverPath);
-            System.out.println("✅ Using EdgeDriver from path: " + edgeDriverPath);
-        } else {
-            System.out.println("⚠️ EDGEWEBDRIVER_PATH environment variable not set. Using default driver location.");
-        }
+		//options.addArguments("--headless=new"); // Use "--headless" for older
+		// versions
+		options.addArguments("--disable-gpu");
+		//options.addArguments("--window-size=1920,1080");
 
-        WebDriver driver = new EdgeDriver(options);
-        ((JavascriptExecutor) driver)
-                .executeScript("Object.defineProperty(navigator, 'webdriver', {get: () -> undefined})");
+		options.addArguments("start-maximized");
+		
+		//System.setProperty("webdriver.edge.driver", "C:\\Users\\v-rkammili\\Downloads\\edgedriver_win64\\msedgedriver.exe");
 
-        Log.info("Browser session started...");
-        setTdriver(driver);
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-    }
+		WebDriver driver = new ChromeDriver(options);
+		((JavascriptExecutor) driver).executeScript(
+			    "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
+			);
 
-    @AfterTest
-    public void afterTest() {
-        getDriver().quit();
-        Log.info("Browser session ended...");
-        tdriver.remove();
-    }
 
-    @BeforeSuite
-    public void beforeSuite() throws IOException {
-        // Use environment variable for report path or fallback
-        String reportPath = System.getenv("REPORT_PATH");
-        if (reportPath == null || reportPath.isEmpty()) {
-            reportPath = "static/index.html";
-        }
+		Log.info("Browser session satrted...");
+		setTdriver(driver);
+		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+	}
 
-        sparkReporter = new ExtentSparkReporter(reportPath);
+	@AfterTest
+	public void afterTest() {
+		getDriver().quit();
+		Log.info("Browser session ended...");
 
-        // Use environment variable for extent JSON config path or fallback
-        String jsonConfigPath = System.getenv("EXTENT_JSON_CONFIG_PATH");
-        if (jsonConfigPath == null || jsonConfigPath.isEmpty()) {
-            jsonConfigPath = "./src/test/resources/extent-reports-json.json"; // Adjust if needed
-        }
+	}
 
-        File jsonConfigFile = new File(jsonConfigPath);
-        if (jsonConfigFile.exists()) {
-            sparkReporter.loadJSONConfig(jsonConfigFile);
-            System.out.println("✅ Loaded extent-reports-json.json from: " + jsonConfigFile.getAbsolutePath());
-        } else {
-            System.out.println("❌ extent-reports-json.json not found at: " + jsonConfigFile.getAbsolutePath());
-        }
+	@BeforeSuite
+	public void beforeSuite() throws IOException {
 
-        reports = new ExtentReports();
-        reports.attachReporter(sparkReporter);
+		sparkReporter = new ExtentSparkReporter("static/index.html");
+		reports = new ExtentReports();
+		sparkReporter.loadJSONConfig(new File("./src/test/resources/extent-reports-json.json"));
+		// sparkReporter.config().setOfflineMode(true);
+		reports.attachReporter(sparkReporter);
 
-        reports.setSystemInfo("OS", System.getProperty("os.name"));
-        reports.setSystemInfo("Java", System.getProperty("java.version"));
-        System.out.println("Before suite");
-    }
+//		String css = new String(Files.readAllBytes(Paths.get("./src/test/resources/extent.css")),
+//				StandardCharsets.UTF_8);
+//		String js = new String(Files.readAllBytes(Paths.get("./src/test/resources/custom.js")), StandardCharsets.UTF_8);
+		
+//		sparkReporter.config().setCss(css);
+//		sparkReporter.config().setJs(js);
 
-    @AfterSuite
-    public void afterSuite() throws IOException {
-        reports.flush();
+		reports.setSystemInfo("OS", System.getProperty("os.name"));
+		reports.setSystemInfo("java", System.getProperty("java.version"));
+		System.out.println("Before suite");
 
-        // Removed Desktop browsing call — not applicable on Azure
+	}
 
-        System.out.println("After suite");
-    }
+	@AfterSuite
+	public void afterSuite() throws IOException {
+		reports.flush();
+		Desktop.getDesktop().browse(new File("static/index.html").toURI());
+		tdriver.remove();
+		//EmailConfig.sendEmail();
+		System.out.println("After suite");
+	}
+
 }

@@ -8,9 +8,10 @@
           <include name="facebookLanding"/>
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
-          <include name="facebookPostInce"/>
           <include name="beforeTest"/>
+          <include name="facebookPostInce"/>
           <include name="afterTest"/>
+          <include name="logLastLine"/>
         </methods>
       </class> <!-- OG_image.ScrappersFacebook -->
     </classes>

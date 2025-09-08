@@ -1,34 +1,20 @@
 package Server;
-
 import static spark.Spark.*;
 
 import java.io.*;
-import java.nio.file.Paths;
-import java.util.*;
-import java.util.logging.Logger;
-
-import javax.servlet.MultipartConfigElement;
 
 public class TriggerServer {
-
-    private static final Logger LOGGER = Logger.getLogger(TriggerServer.class.getName());
-
     public static void main(String[] args) {
 
-        // ✅ Set dynamic port for Azure compatibility
-        String portStr = System.getenv("PORT");
-        int portNumber = (portStr != null) ? Integer.parseInt(portStr) : 8080;
-        port(portNumber);
+        // ✅ Set server port
+        port(8080);
 
-        // ✅ Set static files path from environment variable
-        String staticPath = System.getenv("STATIC_FILES_PATH");
-        if (staticPath != null && !staticPath.isEmpty()) {
-            staticFiles.externalLocation(staticPath);
-        } else {
-            LOGGER.warning("STATIC_FILES_PATH environment variable is not set.");
-        }
+        
+        staticFiles.externalLocation("C:\\Automation_Projects\\Scrapper_autoamtion\\Scrapper_autoamtion\\static");
+        
 
-        // ✅ CORS setup (allow only specific origin in prod)
+
+        // ✅ CORS support
         options("/*", (request, response) -> {
             String accessControlRequestHeaders = request.headers("Access-Control-Request-Headers");
             if (accessControlRequestHeaders != null) {
@@ -44,17 +30,14 @@ public class TriggerServer {
         });
 
         before((request, response) -> {
-            // Use * only in dev, restrict in prod
-            response.header("Access-Control-Allow-Origin", System.getenv().getOrDefault("CORS_ORIGIN", "*"));
+            response.header("Access-Control-Allow-Origin", "*");
             response.header("Access-Control-Allow-Methods", "GET,POST,OPTIONS");
             response.header("Access-Control-Allow-Headers", "Content-Type,Authorization");
         });
 
-        // ✅ File upload endpoint
+        // ✅ POST route: Excel file upload
         post("/upload-excel", (req, res) -> {
-            res.type("application/json");
-
-            req.attribute("org.eclipse.jetty.multipartConfig", new MultipartConfigElement("/temp"));
+            req.attribute("org.eclipse.jetty.multipartConfig", new javax.servlet.MultipartConfigElement("/temp"));
 
             try (InputStream is = req.raw().getPart("file").getInputStream()) {
                 File uploadDir = new File("Uploads");
@@ -65,72 +48,41 @@ public class TriggerServer {
                     byte[] buffer = new byte[4096];
                     int bytesRead;
                     while ((bytesRead = is.read(buffer)) != -1) {
-                        os.write(buffer, 0, bytesRead);
+                    	os.write(buffer, 0, bytesRead);
                     }
                 }
-
-                LOGGER.info("✅ Excel uploaded to: " + uploadedFile.getAbsolutePath());
-
-                return "{\"status\":\"success\",\"message\":\"Excel file uploaded successfully.\"}";
-
+                System.out.println("✅ Excel uploaded: " + uploadedFile.getAbsolutePath());
+                return "Excel file uploaded successfully.";
             } catch (Exception e) {
-                LOGGER.severe("❌ Upload failed: " + e.getMessage());
                 res.status(500);
-                return "{\"status\":\"error\",\"message\":\"Upload failed: " + e.getMessage() + "\"}";
+                return "❌ Failed to upload Excel file: " + e.getMessage();
             }
         });
 
-        // ✅ Test trigger endpoint
+        // ✅ POST route: Trigger tests
         post("/run-tests", (req, res) -> {
-            res.type("application/json");
-
             try {
-                String projectPath = System.getenv("TEST_PROJECT_DIR");
-                if (projectPath == null || projectPath.isEmpty()) {
-                    res.status(500);
-                    return "{\"status\":\"error\",\"message\":\"TEST_PROJECT_DIR is not set.\"}";
-                }
+                File testProject = new File("C:\\Automation_Projects\\Scrapper_autoamtion\\Scrapper_autoamtion");
 
-                File testProject = new File(projectPath);
-
-                // ✅ Use platform-independent command
-                List<String> command;
-                if (System.getProperty("os.name").toLowerCase().contains("win")) {
-                    command = Arrays.asList("cmd.exe", "/c", "mvn test");
-                } else {
-                    command = Arrays.asList("sh", "-c", "mvn test");
-                }
-
-                ProcessBuilder pb = new ProcessBuilder(command);
+                ProcessBuilder pb = new ProcessBuilder("cmd.exe", "/c", "mvn test");
                 pb.directory(testProject);
-                pb.inheritIO(); // Optional: For seeing console output
+                pb.inheritIO();
 
                 Process p = pb.start();
                 int exitCode = p.waitFor();
 
-                if (exitCode == 0) {
-                    LOGGER.info("✅ Test execution successful.");
-                    String reportUrl = "/index.html"; // Update if hosted elsewhere
-                    return String.format("{\"status\":\"success\",\"message\":\"Test execution completed.\",\"report_url\":\"%s\"}", reportUrl);
-                } else {
-                    LOGGER.warning("❌ Test execution failed with exit code: " + exitCode);
-                    res.status(500);
-                    return "{\"status\":\"error\",\"message\":\"Test execution failed.\"}";
-                }
+                String message = "Test execution completed.<br><a href='http://localhost:8080/index.html' target='_blank'>📄 View Extent Report</a>";
+                System.out.println("Returning message: " + message);
+                return message;
 
             } catch (Exception e) {
-                LOGGER.severe("❌ Error during test run: " + e.getMessage());
                 res.status(500);
-                return "{\"status\":\"error\",\"message\":\"" + e.getMessage() + "\"}";
+                return "❌ Error: " + e.getMessage();
             }
         });
 
-        // ✅ Health check endpoint
-        get("/", (req, res) -> {
-            res.type("application/json");
-            return "{\"status\":\"ok\",\"message\":\"Server is up and running!\"}";
-        });
-
-        LOGGER.info("✅ TriggerServer started on port " + portNumber);
+        // ✅ GET route: basic health check
+        get("/", (req, res) -> "Server is up and running!");
+        System.out.println("✅ Spark server started on http://localhost:8080");
     }
 }

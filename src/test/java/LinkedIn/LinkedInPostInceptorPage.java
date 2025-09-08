@@ -1,7 +1,12 @@
 package LinkedIn;
 
 import AbstarctComponents.AbstractClass;
+
+import java.awt.RenderingHints.Key;
+import java.util.concurrent.ConcurrentHashMap.KeySetView;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -33,7 +38,7 @@ public class LinkedInPostInceptorPage extends AbstractClass {
     int i=0;
     public String validateOGimageForURL(String pageUrl, String fileName) throws Exception {
         inputURL.sendKeys(pageUrl);
-        clickInspect.click();
+        clickInspect.sendKeys(Keys.ENTER);
         waitfortheVisbilityOfElement(b);
         clearInput.clear();
         Thread.sleep(2000);

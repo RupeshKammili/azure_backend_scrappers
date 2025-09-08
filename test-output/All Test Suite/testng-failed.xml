@@ -1,19 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite thread-count="2" parallel="tests" name="Failed suite [All Test Suite]">
-  <test thread-count="2" parallel="tests" name="ScrapperTests2(failed)">
+  <test thread-count="2" parallel="tests" name="ScrapperTests(failed)">
     <classes>
-      <class name="OG_image.ScrappersLinkedIn">
+      <class name="OG_image.ScrappersFacebook">
         <methods>
+          <include name="facebookLanding"/>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="beforeTest"/>
+          <include name="facebookPostInce"/>
+          <include name="afterTest"/>
+          <include name="logLastLine"/>
+        </methods>
+      </class> <!-- OG_image.ScrappersFacebook -->
+    </classes>
+  </test> <!-- ScrapperTests(failed) -->
+  <test thread-count="2" parallel="tests" name="ScrapperTests1(failed)">
+    <classes>
+      <class name="OG_image.ScrappersTwitter">
+        <methods>
+          <include name="twitterInspectPost" invocation-numbers="1"/>
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
           <include name="beforeTest"/>
           <include name="afterTest"/>
           <include name="logLastLine"/>
-          <include name="LikedInLanding"/>
-          <include name="LinkedInPostInception" invocation-numbers="1 2 3"/>
+          <include name="twitterLanding"/>
         </methods>
-      </class> <!-- OG_image.ScrappersLinkedIn -->
+      </class> <!-- OG_image.ScrappersTwitter -->
     </classes>
-  </test> <!-- ScrapperTests2(failed) -->
+  </test> <!-- ScrapperTests1(failed) -->
 </suite> <!-- Failed suite [All Test Suite] -->
