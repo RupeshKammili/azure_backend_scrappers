@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="OG_image.ScrappersFacebook">
+      <class name="OG_image.ScrappersLinkedIn">
         <methods>
-          <include name="facebookLanding"/>
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
           <include name="beforeTest"/>
-          <include name="facebookPostInce"/>
           <include name="afterTest"/>
           <include name="logLastLine"/>
+          <include name="LikedInLanding"/>
+          <include name="LinkedInPostInception" invocation-numbers="0 1 2"/>
         </methods>
-      </class> <!-- OG_image.ScrappersFacebook -->
+      </class> <!-- OG_image.ScrappersLinkedIn -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

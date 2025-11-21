@@ -1,4 +1,5 @@
 package Server;
+
 import static spark.Spark.*;
 
 import java.io.*;
@@ -9,10 +10,16 @@ public class TriggerServer {
         // ✅ Set server port
         port(8080);
 
+        // ✅ Serve static files under /static/ path
+        staticFiles.externalLocation("C:\\Users\\MKTtools\\git\\azure_backend_scrappers\\static");
         
-        staticFiles.externalLocation("C:\\Automation_Projects\\Scrapper_autoamtion\\Scrapper_autoamtion\\static");
-        
+        // ✅ Explicitly handle GET request for the root route
+        get("/", (req, res) -> {
+            return "Server is up and running!";
+        });
 
+        // ✅ Serve static files only under `/static/` route
+        // Access static files with http://localhost:8080/static/index.html
 
         // ✅ CORS support
         options("/*", (request, response) -> {
@@ -48,7 +55,7 @@ public class TriggerServer {
                     byte[] buffer = new byte[4096];
                     int bytesRead;
                     while ((bytesRead = is.read(buffer)) != -1) {
-                    	os.write(buffer, 0, bytesRead);
+                        os.write(buffer, 0, bytesRead);
                     }
                 }
                 System.out.println("✅ Excel uploaded: " + uploadedFile.getAbsolutePath());
@@ -62,7 +69,7 @@ public class TriggerServer {
         // ✅ POST route: Trigger tests
         post("/run-tests", (req, res) -> {
             try {
-                File testProject = new File("C:\\Automation_Projects\\Scrapper_autoamtion\\Scrapper_autoamtion");
+                File testProject = new File("C:\\Users\\MKTtools\\git\\azure_backend_scrappers");
 
                 ProcessBuilder pb = new ProcessBuilder("cmd.exe", "/c", "mvn test");
                 pb.directory(testProject);
@@ -71,7 +78,7 @@ public class TriggerServer {
                 Process p = pb.start();
                 int exitCode = p.waitFor();
 
-                String message = "Test execution completed.<br><a href='http://localhost:8080/index.html' target='_blank'>📄 View Extent Report</a>";
+                String message = "Test execution completed.<br><a href='http://4.240.88.62:8080/' target='_blank'>📄 View Extent Report</a>";
                 System.out.println("Returning message: " + message);
                 return message;
 
@@ -81,8 +88,6 @@ public class TriggerServer {
             }
         });
 
-        // ✅ GET route: basic health check
-        get("/", (req, res) -> "Server is up and running!");
-        System.out.println("✅ Spark server started on http://localhost:8080");
+        System.out.println("✅ Spark server started on http://4.240.88.62:8080/");
     }
 }

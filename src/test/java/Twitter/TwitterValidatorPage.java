@@ -22,22 +22,29 @@ public class TwitterValidatorPage extends AbstractClass {
     WebElement testPageURL;
 
     //driver.findElement(By.xpath("//input[@value='Preview card']")).click();
-    @FindBy(xpath = "//input[@value='Preview card']")
+    @FindBy(xpath = "//button[.='Check preview']")
     WebElement previewCardButton;
 
     //driver.findElement(By.xpath("//input[@name='url']")).clear();
     @FindBy(xpath = "//input[@name='url']")
     WebElement clearPreviewCard;
 
-    By b = By.xpath("//div[@class='RuntimeConsole-console-success']");
+    By b = By.cssSelector(".css-13zknum");
 
     int i=0;
     public String twitterPageurlsValidation(String pageUrl) throws Exception {
 
         testPageURL.sendKeys(pageUrl);
         previewCardButton.click();
+        executeJSScript("window.scrollBy(0,550);");
+        
+        Thread.sleep(2000);
         waitfortheVisbilityOfElement(b);
+        
         String path = takeScreeShot(i + "Twitter.jpg");
+        executeJSScript("window.scrollTo(500,0);");
+        
+        Thread.sleep(2000);
         clearPreviewCard.clear();
         i++;
         return path;

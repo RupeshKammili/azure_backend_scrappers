@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-All_Test_Suite" class="navigator-link">
-              <span class="suite-name border-passed">All Test Suite</span>
+              <span class="suite-name border-failed">All Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,12 +50,12 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-All_Test_Suite" class="navigator-link ">
-                    <span>C:\Automation_Projects\Scrapper_autoamtion\Scrapper_autoamtion\testng.xml</span>
+                    <span>C:\Users\MKTtools\git\azure_backend_scrappers\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-All_Test_Suite" class="navigator-link ">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">3 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,50 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">10 methods,   10 passed</span>
+                    <span class="method-stats">18 methods, 4 failed,  1 skipped,  13 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-All_Test_Suite" class="hide-methods failed suite-All_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-All_Test_Suite -->
+                      <a href="#" panel-name="suite-All_Test_Suite" class="show-methods failed suite-All_Test_Suite"> (show)</a> <!-- show-methods failed suite-All_Test_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-All_Test_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="OG_image.ScrappersLinkedIn" class="method navigator-link" hash-for-method="LinkedInPostInception(https://www.microsoft.com/en-us/surface/devices/surface-pro)">LinkedInPostInception(https://www.microsoft.com/en-us/surface/devices/surface-pro)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="OG_image.ScrappersLinkedIn" class="method navigator-link" hash-for-method="LinkedInPostInception(https://www.microsoft.com/en-us/surface/devices/surface-laptop)">LinkedInPostInception(https://www.microsoft.com/en-us/surface/devices/surface-laptop)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="OG_image.ScrappersLinkedIn" class="method navigator-link" hash-for-method="LinkedInPostInception(https://www.microsoft.com/en-us/surface)">LinkedInPostInception(https://www.microsoft.com/en-us/surface)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="OG_image.ScrappersLinkedIn" class="method navigator-link" hash-for-method="LinkedInPostInception(microsoft.com/en-us/surface/devices/compare-devices)">LinkedInPostInception(microsoft.com/en-us/surface/devices/compare-devices)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-All_Test_Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-All_Test_Suite" class="hide-methods skipped suite-All_Test_Suite"> (hide)</a> <!-- hide-methods skipped suite-All_Test_Suite -->
+                      <a href="#" panel-name="suite-All_Test_Suite" class="show-methods skipped suite-All_Test_Suite"> (show)</a> <!-- show-methods skipped suite-All_Test_Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-All_Test_Suite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="OG_image.ScrappersLinkedIn" class="method navigator-link" hash-for-method="logLastLine">logLastLine</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-All_Test_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -108,21 +151,6 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-All_Test_Suite" title="OG_image.ScrappersLinkedIn" class="method navigator-link" hash-for-method="LinkedInPostInception(https://www.microsoft.com/en-us/surface)">LinkedInPostInception(https://www.microsoft.com/en-us/surface)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-All_Test_Suite" title="OG_image.ScrappersLinkedIn" class="method navigator-link" hash-for-method="LinkedInPostInception(https://www.microsoft.com/en-us/surface)">LinkedInPostInception(https://www.microsoft.com/en-us/surface)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-All_Test_Suite" title="OG_image.ScrappersLinkedIn" class="method navigator-link" hash-for-method="LinkedInPostInception(https://www.microsoft.com/en-us/surface)">LinkedInPostInception(https://www.microsoft.com/en-us/surface)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-All_Test_Suite" title="OG_image.ScrappersFacebook" class="method navigator-link" hash-for-method="facebookLanding">facebookLanding</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -133,12 +161,17 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-All_Test_Suite" title="OG_image.ScrappersFacebook" class="method navigator-link" hash-for-method="facebookPostInce(https://www.microsoft.com/en-us/surface)">facebookPostInce(https://www.microsoft.com/en-us/surface)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-All_Test_Suite" title="OG_image.ScrappersFacebook" class="method navigator-link" hash-for-method="facebookPostInce(https://www.microsoft.com/en-us/surface/devices/surface-laptop)">facebookPostInce(https://www.microsoft.com/en-us/surface/devices/surface-laptop)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-All_Test_Suite" title="OG_image.ScrappersFacebook" class="method navigator-link" hash-for-method="facebookPostInce(https://www.microsoft.com/en-us/surface)">facebookPostInce(https://www.microsoft.com/en-us/surface)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-All_Test_Suite" title="OG_image.ScrappersFacebook" class="method navigator-link" hash-for-method="facebookPostInce(microsoft.com/en-us/surface/devices/compare-devices)">facebookPostInce(microsoft.com/en-us/surface/devices/compare-devices)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="OG_image.ScrappersFacebook" class="method navigator-link" hash-for-method="facebookPostInce(https://www.microsoft.com/en-us/surface/devices/surface-pro)">facebookPostInce(https://www.microsoft.com/en-us/surface/devices/surface-pro)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -148,7 +181,32 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-All_Test_Suite" title="OG_image.ScrappersLinkedIn" class="method navigator-link" hash-for-method="logLastLine">logLastLine</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-All_Test_Suite" title="OG_image.ScrappersTwitter" class="method navigator-link" hash-for-method="logLastLine">logLastLine</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="OG_image.ScrappersTwitter" class="method navigator-link" hash-for-method="twitterInspectPost(microsoft.com/en-us/surface/devices/compare-devices)">twitterInspectPost(microsoft.com/en-us/surface/devices/compare-devices)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="OG_image.ScrappersTwitter" class="method navigator-link" hash-for-method="twitterInspectPost(https://www.microsoft.com/en-us/surface/devices/surface-pro)">twitterInspectPost(https://www.microsoft.com/en-us/surface/devices/surface-pro)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="OG_image.ScrappersTwitter" class="method navigator-link" hash-for-method="twitterInspectPost(https://www.microsoft.com/en-us/surface/devices/surface-laptop)">twitterInspectPost(https://www.microsoft.com/en-us/surface/devices/surface-laptop)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="OG_image.ScrappersTwitter" class="method navigator-link" hash-for-method="twitterInspectPost(https://www.microsoft.com/en-us/surface)">twitterInspectPost(https://www.microsoft.com/en-us/surface)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="OG_image.ScrappersTwitter" class="method navigator-link" hash-for-method="twitterLanding">twitterLanding</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-All_Test_Suite -->
@@ -163,6 +221,252 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-All_Test_Suite" class="panel All_Test_Suite">
+          <div class="suite-All_Test_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">OG_image.ScrappersLinkedIn</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="LinkedInPostInception(https://www.microsoft.com/en-us/surface/devices/surface-pro)">
+                  </a> <!-- LinkedInPostInception(https://www.microsoft.com/en-us/surface/devices/surface-pro) -->
+                  <span class="method-name">LinkedInPostInception</span>
+                  <span class="parameters">(https://www.microsoft.com/en-us/surface/devices/surface-pro)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[contains(@placeholder, &apos;Enter a URL to see how&apos;)]&quot;}
+  (Session info: MicrosoftEdge=142.0.3595.90)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows Server 2022&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [76cccc810f93b3719f8cb9799eaa5c16, findElement {using=xpath, value=//input[contains(@placeholder, &apos;Enter a URL to see how&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 142.0.3595.90, fedcm:accounts: true, goog:processID: 10344, ms:edgeOptions: {debuggerAddress: localhost:53516}, msedge: {msedgedriverVersion: 142.0.3595.80 (0fc2e42aeea0..., userDataDir: C:\Windows\SystemTemp\scope...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53516/devtoo..., se:cdpVersion: 142.0.3595.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 76cccc810f93b3719f8cb9799eaa5c16
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy31.sendKeys(Unknown Source)
+	at LinkedIn.LinkedInPostInceptorPage.validateOGimageForURL(LinkedInPostInceptorPage.java:37)
+	at OG_image.ScrappersLinkedIn.LinkedInPostInception(ScrappersLinkedIn.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="LinkedInPostInception(https://www.microsoft.com/en-us/surface/devices/surface-laptop)">
+                  </a> <!-- LinkedInPostInception(https://www.microsoft.com/en-us/surface/devices/surface-laptop) -->
+                  <span class="method-name">LinkedInPostInception</span>
+                  <span class="parameters">(https://www.microsoft.com/en-us/surface/devices/surface-laptop)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[contains(@placeholder, &apos;Enter a URL to see how&apos;)]&quot;}
+  (Session info: MicrosoftEdge=142.0.3595.90)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows Server 2022&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [76cccc810f93b3719f8cb9799eaa5c16, findElement {using=xpath, value=//input[contains(@placeholder, &apos;Enter a URL to see how&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 142.0.3595.90, fedcm:accounts: true, goog:processID: 10344, ms:edgeOptions: {debuggerAddress: localhost:53516}, msedge: {msedgedriverVersion: 142.0.3595.80 (0fc2e42aeea0..., userDataDir: C:\Windows\SystemTemp\scope...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53516/devtoo..., se:cdpVersion: 142.0.3595.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 76cccc810f93b3719f8cb9799eaa5c16
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy31.sendKeys(Unknown Source)
+	at LinkedIn.LinkedInPostInceptorPage.validateOGimageForURL(LinkedInPostInceptorPage.java:37)
+	at OG_image.ScrappersLinkedIn.LinkedInPostInception(ScrappersLinkedIn.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="LinkedInPostInception(https://www.microsoft.com/en-us/surface)">
+                  </a> <!-- LinkedInPostInception(https://www.microsoft.com/en-us/surface) -->
+                  <span class="method-name">LinkedInPostInception</span>
+                  <span class="parameters">(https://www.microsoft.com/en-us/surface)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[contains(@placeholder, &apos;Enter a URL to see how&apos;)]&quot;}
+  (Session info: MicrosoftEdge=142.0.3595.90)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows Server 2022&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [76cccc810f93b3719f8cb9799eaa5c16, findElement {using=xpath, value=//input[contains(@placeholder, &apos;Enter a URL to see how&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 142.0.3595.90, fedcm:accounts: true, goog:processID: 10344, ms:edgeOptions: {debuggerAddress: localhost:53516}, msedge: {msedgedriverVersion: 142.0.3595.80 (0fc2e42aeea0..., userDataDir: C:\Windows\SystemTemp\scope...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53516/devtoo..., se:cdpVersion: 142.0.3595.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 76cccc810f93b3719f8cb9799eaa5c16
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy31.sendKeys(Unknown Source)
+	at LinkedIn.LinkedInPostInceptorPage.validateOGimageForURL(LinkedInPostInceptorPage.java:37)
+	at OG_image.ScrappersLinkedIn.LinkedInPostInception(ScrappersLinkedIn.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="LinkedInPostInception(microsoft.com/en-us/surface/devices/compare-devices)">
+                  </a> <!-- LinkedInPostInception(microsoft.com/en-us/surface/devices/compare-devices) -->
+                  <span class="method-name">LinkedInPostInception</span>
+                  <span class="parameters">(microsoft.com/en-us/surface/devices/compare-devices)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[contains(@placeholder, &apos;Enter a URL to see how&apos;)]&quot;}
+  (Session info: MicrosoftEdge=142.0.3595.90)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows Server 2022&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [76cccc810f93b3719f8cb9799eaa5c16, findElement {using=xpath, value=//input[contains(@placeholder, &apos;Enter a URL to see how&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 142.0.3595.90, fedcm:accounts: true, goog:processID: 10344, ms:edgeOptions: {debuggerAddress: localhost:53516}, msedge: {msedgedriverVersion: 142.0.3595.80 (0fc2e42aeea0..., userDataDir: C:\Windows\SystemTemp\scope...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53516/devtoo..., se:cdpVersion: 142.0.3595.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 76cccc810f93b3719f8cb9799eaa5c16
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy31.sendKeys(Unknown Source)
+	at LinkedIn.LinkedInPostInceptorPage.validateOGimageForURL(LinkedInPostInceptorPage.java:37)
+	at OG_image.ScrappersLinkedIn.LinkedInPostInception(ScrappersLinkedIn.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-All_Test_Suite-class-failed -->
+          <div class="suite-All_Test_Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">OG_image.ScrappersLinkedIn</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="logLastLine">
+                  </a> <!-- logLastLine -->
+                  <span class="method-name">logLastLine</span>
+                  <div class="stack-trace">java.lang.Throwable: Method OG_image.ScrappersLinkedIn.logLastLine() on instance OG_image.ScrappersLinkedIn@15de0b3c depends on not successfully finished methods 
+[OG_image.ScrappersLinkedIn.LinkedInPostInception() on instance OG_image.ScrappersLinkedIn@15de0b3c]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 8 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-All_Test_Suite-class-skipped -->
+          <div class="suite-All_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">OG_image.ScrappersTwitter</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="logLastLine">
+                  </a> <!-- logLastLine -->
+                  <span class="method-name">logLastLine</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="twitterInspectPost(microsoft.com/en-us/surface/devices/compare-devices)">
+                  </a> <!-- twitterInspectPost(microsoft.com/en-us/surface/devices/compare-devices) -->
+                  <span class="method-name">twitterInspectPost</span>
+                  <span class="parameters">(microsoft.com/en-us/surface/devices/compare-devices)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="twitterInspectPost(https://www.microsoft.com/en-us/surface/devices/surface-pro)">
+                  </a> <!-- twitterInspectPost(https://www.microsoft.com/en-us/surface/devices/surface-pro) -->
+                  <span class="method-name">twitterInspectPost</span>
+                  <span class="parameters">(https://www.microsoft.com/en-us/surface/devices/surface-pro)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="twitterInspectPost(https://www.microsoft.com/en-us/surface/devices/surface-laptop)">
+                  </a> <!-- twitterInspectPost(https://www.microsoft.com/en-us/surface/devices/surface-laptop) -->
+                  <span class="method-name">twitterInspectPost</span>
+                  <span class="parameters">(https://www.microsoft.com/en-us/surface/devices/surface-laptop)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="twitterInspectPost(https://www.microsoft.com/en-us/surface)">
+                  </a> <!-- twitterInspectPost(https://www.microsoft.com/en-us/surface) -->
+                  <span class="method-name">twitterInspectPost</span>
+                  <span class="parameters">(https://www.microsoft.com/en-us/surface)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="twitterLanding">
+                  </a> <!-- twitterLanding -->
+                  <span class="method-name">twitterLanding</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-All_Test_Suite-class-passed -->
           <div class="suite-All_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -174,37 +478,6 @@
                   <a name="LikedInLanding">
                   </a> <!-- LikedInLanding -->
                   <span class="method-name">LikedInLanding</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="LinkedInPostInception(https://www.microsoft.com/en-us/surface)">
-                  </a> <!-- LinkedInPostInception(https://www.microsoft.com/en-us/surface) -->
-                  <span class="method-name">LinkedInPostInception</span>
-                  <span class="parameters">(https://www.microsoft.com/en-us/surface)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="LinkedInPostInception(https://www.microsoft.com/en-us/surface)">
-                  </a> <!-- LinkedInPostInception(https://www.microsoft.com/en-us/surface) -->
-                  <span class="method-name">LinkedInPostInception</span>
-                  <span class="parameters">(https://www.microsoft.com/en-us/surface)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="LinkedInPostInception(https://www.microsoft.com/en-us/surface)">
-                  </a> <!-- LinkedInPostInception(https://www.microsoft.com/en-us/surface) -->
-                  <span class="method-name">LinkedInPostInception</span>
-                  <span class="parameters">(https://www.microsoft.com/en-us/surface)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="logLastLine">
-                  </a> <!-- logLastLine -->
-                  <span class="method-name">logLastLine</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -232,18 +505,26 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="facebookPostInce(https://www.microsoft.com/en-us/surface)">
-                  </a> <!-- facebookPostInce(https://www.microsoft.com/en-us/surface) -->
+                  <a name="facebookPostInce(https://www.microsoft.com/en-us/surface/devices/surface-laptop)">
+                  </a> <!-- facebookPostInce(https://www.microsoft.com/en-us/surface/devices/surface-laptop) -->
                   <span class="method-name">facebookPostInce</span>
-                  <span class="parameters">(https://www.microsoft.com/en-us/surface)</span>
+                  <span class="parameters">(https://www.microsoft.com/en-us/surface/devices/surface-laptop)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="facebookPostInce(https://www.microsoft.com/en-us/surface)">
-                  </a> <!-- facebookPostInce(https://www.microsoft.com/en-us/surface) -->
+                  <a name="facebookPostInce(microsoft.com/en-us/surface/devices/compare-devices)">
+                  </a> <!-- facebookPostInce(microsoft.com/en-us/surface/devices/compare-devices) -->
                   <span class="method-name">facebookPostInce</span>
-                  <span class="parameters">(https://www.microsoft.com/en-us/surface)</span>
+                  <span class="parameters">(microsoft.com/en-us/surface/devices/compare-devices)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="facebookPostInce(https://www.microsoft.com/en-us/surface/devices/surface-pro)">
+                  </a> <!-- facebookPostInce(https://www.microsoft.com/en-us/surface/devices/surface-pro) -->
+                  <span class="method-name">facebookPostInce</span>
+                  <span class="parameters">(https://www.microsoft.com/en-us/surface/devices/surface-pro)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -258,19 +539,24 @@
         </div> <!-- panel All_Test_Suite -->
         <div panel-name="test-xml-All_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Automation_Projects\Scrapper_autoamtion\Scrapper_autoamtion\testng.xml</span>
+            <span class="header-content">C:\Users\MKTtools\git\azure_backend_scrappers\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;All Test Suite&quot; verbose=&quot;0&quot;&gt;
-  &lt;test thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;ScrapperTests&quot; verbose=&quot;0&quot;&gt;
+&lt;suite thread-count=&quot;1&quot; parallel=&quot;tests&quot; name=&quot;All Test Suite&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;1&quot; parallel=&quot;tests&quot; name=&quot;ScrapperTests&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;OG_image.ScrappersFacebook&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- ScrapperTests --&gt;
-  &lt;test thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;ScrapperTests2&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;1&quot; parallel=&quot;tests&quot; name=&quot;ScrapperTests1&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;OG_image.ScrappersTwitter&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- ScrapperTests1 --&gt;
+  &lt;test thread-count=&quot;1&quot; parallel=&quot;tests&quot; name=&quot;ScrapperTests2&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;OG_image.ScrappersLinkedIn&quot;/&gt;
     &lt;/classes&gt;
@@ -287,6 +573,9 @@
             <ul>
               <li>
                 <span class="test-name">ScrapperTests (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">ScrapperTests1 (1 class)</span>
               </li>
               <li>
                 <span class="test-name">ScrapperTests2 (1 class)</span>
@@ -315,52 +604,84 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(10);
+data.addRows(18);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'LikedInLanding')
-data.setCell(0, 2, 'OG_image.ScrappersLinkedIn')
-data.setCell(0, 3, 42385);
+data.setCell(0, 1, 'facebookLanding')
+data.setCell(0, 2, 'OG_image.ScrappersFacebook')
+data.setCell(0, 3, 18455);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'facebookLanding')
-data.setCell(1, 2, 'OG_image.ScrappersFacebook')
-data.setCell(1, 3, 30648);
+data.setCell(1, 1, 'LikedInLanding')
+data.setCell(1, 2, 'OG_image.ScrappersLinkedIn')
+data.setCell(1, 3, 7359);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'facebookPostInce')
-data.setCell(2, 2, 'OG_image.ScrappersFacebook')
-data.setCell(2, 3, 6745);
+data.setCell(2, 1, 'LinkedInPostInception')
+data.setCell(2, 2, 'OG_image.ScrappersLinkedIn')
+data.setCell(2, 3, 5281);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'LinkedInPostInception')
 data.setCell(3, 2, 'OG_image.ScrappersLinkedIn')
-data.setCell(3, 3, 5179);
+data.setCell(3, 3, 5046);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'facebookPostInce')
-data.setCell(4, 2, 'OG_image.ScrappersFacebook')
-data.setCell(4, 3, 4521);
+data.setCell(4, 1, 'LinkedInPostInception')
+data.setCell(4, 2, 'OG_image.ScrappersLinkedIn')
+data.setCell(4, 3, 5032);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'facebookPostInce')
-data.setCell(5, 2, 'OG_image.ScrappersFacebook')
-data.setCell(5, 3, 4061);
+data.setCell(5, 1, 'LinkedInPostInception')
+data.setCell(5, 2, 'OG_image.ScrappersLinkedIn')
+data.setCell(5, 3, 5013);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'LinkedInPostInception')
-data.setCell(6, 2, 'OG_image.ScrappersLinkedIn')
-data.setCell(6, 3, 3959);
+data.setCell(6, 1, 'twitterInspectPost')
+data.setCell(6, 2, 'OG_image.ScrappersTwitter')
+data.setCell(6, 3, 4450);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'LinkedInPostInception')
-data.setCell(7, 2, 'OG_image.ScrappersLinkedIn')
-data.setCell(7, 3, 3350);
+data.setCell(7, 1, 'twitterInspectPost')
+data.setCell(7, 2, 'OG_image.ScrappersTwitter')
+data.setCell(7, 3, 4368);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'logLastLine')
-data.setCell(8, 2, 'OG_image.ScrappersFacebook')
-data.setCell(8, 3, 9);
+data.setCell(8, 1, 'twitterInspectPost')
+data.setCell(8, 2, 'OG_image.ScrappersTwitter')
+data.setCell(8, 3, 4365);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'logLastLine')
-data.setCell(9, 2, 'OG_image.ScrappersLinkedIn')
-data.setCell(9, 3, 2);
+data.setCell(9, 1, 'twitterInspectPost')
+data.setCell(9, 2, 'OG_image.ScrappersTwitter')
+data.setCell(9, 3, 4341);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'twitterLanding')
+data.setCell(10, 2, 'OG_image.ScrappersTwitter')
+data.setCell(10, 3, 2791);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'facebookPostInce')
+data.setCell(11, 2, 'OG_image.ScrappersFacebook')
+data.setCell(11, 3, 2342);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'facebookPostInce')
+data.setCell(12, 2, 'OG_image.ScrappersFacebook')
+data.setCell(12, 3, 2115);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'facebookPostInce')
+data.setCell(13, 2, 'OG_image.ScrappersFacebook')
+data.setCell(13, 3, 2054);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'facebookPostInce')
+data.setCell(14, 2, 'OG_image.ScrappersFacebook')
+data.setCell(14, 3, 1751);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'logLastLine')
+data.setCell(15, 2, 'OG_image.ScrappersFacebook')
+data.setCell(15, 3, 2);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'logLastLine')
+data.setCell(16, 2, 'OG_image.ScrappersTwitter')
+data.setCell(16, 3, 0);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'logLastLine')
+data.setCell(17, 2, 'OG_image.ScrappersLinkedIn')
+data.setCell(17, 3, 0);
 window.suiteTableData['All_Test_Suite']= { tableData: data, tableDiv: 'times-div-All_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 36 seconds</span>
               <div id="times-div-All_Test_Suite">
               </div> <!-- times-div-All_Test_Suite -->
             </div> <!-- times-div -->
@@ -396,90 +717,113 @@ return data;
               <div class="chronological-class-name">OG_image.ScrappersFacebook</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">603 ms</span>
+                <span class="method-start">656 ms</span>
               </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">facebookLanding</span>
+                <span class="method-start">8657 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">facebookPostInce(https://www.microsoft.com/en-us/surface)</span>
+                <span class="method-start">28367 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">facebookPostInce(https://www.microsoft.com/en-us/surface/devices/surface-pro)</span>
+                <span class="method-start">30484 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">facebookPostInce(https://www.microsoft.com/en-us/surface/devices/surface-laptop)</span>
+                <span class="method-start">32538 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">facebookPostInce(microsoft.com/en-us/surface/devices/compare-devices)</span>
+                <span class="method-start">34290 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">logLastLine</span>
+                <span class="method-start">36634 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">afterTest</span>
+                <span class="method-start">36636 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">OG_image.ScrappersTwitter</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">beforeTest</span>
+                <span class="method-start">36923 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">twitterLanding</span>
+                <span class="method-start">37568 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">twitterInspectPost(https://www.microsoft.com/en-us/surface)</span>
+                <span class="method-start">40387 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">twitterInspectPost(https://www.microsoft.com/en-us/surface/devices/surface-pro)</span>
+                <span class="method-start">44838 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">twitterInspectPost(https://www.microsoft.com/en-us/surface/devices/surface-laptop)</span>
+                <span class="method-start">49207 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">twitterInspectPost(microsoft.com/en-us/surface/devices/compare-devices)</span>
+                <span class="method-start">53573 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">logLastLine</span>
+                <span class="method-start">57916 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">afterTest</span>
+                <span class="method-start">57916 ms</span>
+              </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">OG_image.ScrappersLinkedIn</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">603 ms</span>
+                <span class="method-start">58129 ms</span>
               </div> <!-- configuration-test before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">OG_image.ScrappersFacebook</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">facebookLanding</span>
-                <span class="method-start">16746 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">OG_image.ScrappersLinkedIn</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">LikedInLanding</span>
-                <span class="method-start">16746 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">OG_image.ScrappersFacebook</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">facebookPostInce(https://www.microsoft.com/en-us/surface)</span>
-                <span class="method-start">50496 ms</span>
+                <span class="method-start">58765 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">facebookPostInce(https://www.microsoft.com/en-us/surface)</span>
-                <span class="method-start">57248 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">OG_image.ScrappersLinkedIn</div> <!-- chronological-class-name -->
-              <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">LinkedInPostInception(https://www.microsoft.com/en-us/surface)</span>
-                <span class="method-start">59362 ms</span>
+                <span class="method-start">66152 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">OG_image.ScrappersFacebook</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">facebookPostInce(https://www.microsoft.com/en-us/surface)</span>
-                <span class="method-start">61773 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">LinkedInPostInception(https://www.microsoft.com/en-us/surface/devices/surface-pro)</span>
+                <span class="method-start">71444 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">OG_image.ScrappersLinkedIn</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">LinkedInPostInception(https://www.microsoft.com/en-us/surface)</span>
-                <span class="method-start">64543 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">LinkedInPostInception(https://www.microsoft.com/en-us/surface/devices/surface-laptop)</span>
+                <span class="method-start">76492 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">OG_image.ScrappersFacebook</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">logLastLine</span>
-                <span class="method-start">65838 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">LinkedInPostInception(microsoft.com/en-us/surface/devices/compare-devices)</span>
+                <span class="method-start">81525 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">65851 ms</span>
-              </div> <!-- configuration-test after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">OG_image.ScrappersLinkedIn</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">LinkedInPostInception(https://www.microsoft.com/en-us/surface)</span>
-                <span class="method-start">68504 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">logLastLine</span>
-                <span class="method-start">71858 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-test after">
-                <span class="method-name">afterTest</span>
-                <span class="method-start">71865 ms</span>
+                <span class="method-start">86540 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">73400 ms</span>
+                <span class="method-start">86795 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

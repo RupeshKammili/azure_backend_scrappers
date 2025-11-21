@@ -10,8 +10,6 @@ import AbstarctComponents.Log;
 
 import org.testng.annotations.Test;
 
-import java.time.Duration;
-
 public class ScrappersTwitter extends BaseTest {
 
 	TwitterValidatorPage twitterValidatorPage;
@@ -25,8 +23,7 @@ public class ScrappersTwitter extends BaseTest {
 		lpage.goToTwitter();
 
 		Log.info("Navigating to Twitter post incepator page...");
-		twitterValidatorPage = lpage.loginIntoTwitter(prop.getProperty("Tusername").toString(),
-				prop.getProperty("Tpassword").toString());
+		twitterValidatorPage = lpage.loginIntoTwitter();
 		Log.info("Loging in...");
 
 		test = reports.createTest("Test Twitter Scrapper", "Please see the details tab below for the test URL and the OG image.")

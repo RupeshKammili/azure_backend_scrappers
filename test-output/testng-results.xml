@@ -1,200 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-02T23:25:31 IST" name="All Test Suite" finished-at="2025-09-02T23:26:21 IST" duration-ms="49934">
+  <suite started-at="2025-11-16T10:21:45 IST" name="All Test Suite" finished-at="2025-11-16T10:22:30 IST" duration-ms="44193">
     <groups>
     </groups>
-    <test started-at="2025-09-02T23:25:31 IST" name="ScrapperTests" finished-at="2025-09-02T23:26:01 IST" duration-ms="29280">
+    <test started-at="2025-11-16T10:21:45 IST" name="ScrapperTests" finished-at="2025-11-16T10:22:11 IST" duration-ms="25568">
       <class name="OG_image.ScrappersFacebook">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:OG_image.ScrappersFacebook@77f80c04]" started-at="2025-09-02T23:25:31 IST" name="beforeTest" finished-at="2025-09-02T23:25:35 IST" duration-ms="3152" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:OG_image.ScrappersFacebook@77f80c04]" started-at="2025-11-16T10:21:45 IST" name="beforeTest" finished-at="2025-11-16T10:21:47 IST" duration-ms="1726" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="facebookLanding()[pri:0, instance:OG_image.ScrappersFacebook@77f80c04]" started-at="2025-09-02T23:25:35 IST" name="facebookLanding" finished-at="2025-09-02T23:25:51 IST" duration-ms="16391" status="PASS">
+        <test-method signature="facebookLanding()[pri:0, instance:OG_image.ScrappersFacebook@77f80c04]" started-at="2025-11-16T10:21:47 IST" name="facebookLanding" finished-at="2025-11-16T10:22:07 IST" duration-ms="19449" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- facebookLanding -->
-        <test-method signature="facebookPostInce(java.lang.String)[pri:0, instance:OG_image.ScrappersFacebook@77f80c04]" started-at="2025-09-02T23:25:51 IST" name="facebookPostInce" data-provider="needTotestUrls" finished-at="2025-09-02T23:25:57 IST" depends-on-methods="OG_image.ScrappersFacebook.facebookLanding" duration-ms="5926" status="PASS">
+        <test-method signature="facebookPostInce(java.lang.String)[pri:0, instance:OG_image.ScrappersFacebook@77f80c04]" started-at="2025-11-16T10:22:07 IST" name="facebookPostInce" data-provider="needTotestUrls" finished-at="2025-11-16T10:22:11 IST" depends-on-methods="OG_image.ScrappersFacebook.facebookLanding" duration-ms="3626" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[https://www.microsoft.com/en-us/store/collections/surfaceproaccessories]]>
+                <![CDATA[https://www.microsoft.com/en-us/windows/extended-security-updates]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- facebookPostInce -->
-        <test-method signature="facebookPostInce(java.lang.String)[pri:0, instance:OG_image.ScrappersFacebook@77f80c04]" started-at="2025-09-02T23:25:57 IST" name="facebookPostInce" data-provider="needTotestUrls" finished-at="2025-09-02T23:25:59 IST" depends-on-methods="OG_image.ScrappersFacebook.facebookLanding" duration-ms="2441" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://www.microsoft.com/en-us/store/collections/surfaceproaccessories]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- facebookPostInce -->
-        <test-method signature="logLastLine()[pri:0, instance:OG_image.ScrappersFacebook@77f80c04]" started-at="2025-09-02T23:25:59 IST" name="logLastLine" finished-at="2025-09-02T23:25:59 IST" depends-on-methods="OG_image.ScrappersFacebook.facebookPostInce" duration-ms="2" status="PASS">
+        <test-method signature="logLastLine()[pri:0, instance:OG_image.ScrappersFacebook@77f80c04]" started-at="2025-11-16T10:22:11 IST" name="logLastLine" finished-at="2025-11-16T10:22:11 IST" depends-on-methods="OG_image.ScrappersFacebook.facebookPostInce" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logLastLine -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:OG_image.ScrappersFacebook@77f80c04]" started-at="2025-09-02T23:26:00 IST" name="afterTest" finished-at="2025-09-02T23:26:01 IST" duration-ms="1134" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:OG_image.ScrappersFacebook@77f80c04]" started-at="2025-11-16T10:22:11 IST" name="afterTest" finished-at="2025-11-16T10:22:11 IST" duration-ms="209" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- OG_image.ScrappersFacebook -->
     </test> <!-- ScrapperTests -->
-    <test started-at="2025-09-02T23:25:31 IST" name="ScrapperTests1" finished-at="2025-09-02T23:26:20 IST" duration-ms="48732">
+    <test started-at="2025-11-16T10:22:11 IST" name="ScrapperTests1" finished-at="2025-11-16T10:22:18 IST" duration-ms="6918">
       <class name="OG_image.ScrappersTwitter">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:OG_image.ScrappersTwitter@53aad5d5]" started-at="2025-09-02T23:25:31 IST" name="beforeTest" finished-at="2025-09-02T23:25:35 IST" duration-ms="3152" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:OG_image.ScrappersTwitter@41c2284a]" started-at="2025-11-16T10:22:11 IST" name="beforeTest" finished-at="2025-11-16T10:22:12 IST" duration-ms="626" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="twitterLanding()[pri:0, instance:OG_image.ScrappersTwitter@53aad5d5]" started-at="2025-09-02T23:25:35 IST" name="twitterLanding" finished-at="2025-09-02T23:25:46 IST" duration-ms="11327" status="PASS">
+        <test-method signature="twitterLanding()[pri:0, instance:OG_image.ScrappersTwitter@41c2284a]" started-at="2025-11-16T10:22:12 IST" name="twitterLanding" finished-at="2025-11-16T10:22:13 IST" duration-ms="1610" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- twitterLanding -->
-        <test-method signature="twitterInspectPost(java.lang.String)[pri:0, instance:OG_image.ScrappersTwitter@53aad5d5]" started-at="2025-09-02T23:25:47 IST" name="twitterInspectPost" data-provider="needTotestUrls" finished-at="2025-09-02T23:25:55 IST" depends-on-methods="OG_image.ScrappersTwitter.twitterLanding" duration-ms="7972" status="PASS">
+        <test-method signature="twitterInspectPost(java.lang.String)[pri:0, instance:OG_image.ScrappersTwitter@41c2284a]" started-at="2025-11-16T10:22:13 IST" name="twitterInspectPost" data-provider="needTotestUrls" finished-at="2025-11-16T10:22:18 IST" depends-on-methods="OG_image.ScrappersTwitter.twitterLanding" duration-ms="4445" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[https://www.microsoft.com/en-us/store/collections/surfaceproaccessories]]>
+                <![CDATA[https://www.microsoft.com/en-us/windows/extended-security-updates]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- twitterInspectPost -->
-        <test-method signature="twitterInspectPost(java.lang.String)[pri:0, instance:OG_image.ScrappersTwitter@53aad5d5]" started-at="2025-09-02T23:25:55 IST" name="twitterInspectPost" data-provider="needTotestUrls" finished-at="2025-09-02T23:25:57 IST" depends-on-methods="OG_image.ScrappersTwitter.twitterLanding" duration-ms="2093" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://www.microsoft.com/en-us/store/collections/surfaceproaccessories]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- twitterInspectPost -->
-        <test-method signature="logLastLine()[pri:0, instance:OG_image.ScrappersTwitter@53aad5d5]" started-at="2025-09-02T23:25:57 IST" name="logLastLine" finished-at="2025-09-02T23:25:57 IST" depends-on-methods="OG_image.ScrappersTwitter.twitterInspectPost" duration-ms="3" status="PASS">
+        <test-method signature="logLastLine()[pri:0, instance:OG_image.ScrappersTwitter@41c2284a]" started-at="2025-11-16T10:22:18 IST" name="logLastLine" finished-at="2025-11-16T10:22:18 IST" depends-on-methods="OG_image.ScrappersTwitter.twitterInspectPost" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logLastLine -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:OG_image.ScrappersTwitter@53aad5d5]" started-at="2025-09-02T23:25:57 IST" name="afterTest" finished-at="2025-09-02T23:26:20 IST" duration-ms="23160" status="FAIL">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[Timed out waiting for driver server to stop.
-Build info: version: '4.11.0', revision: '040bc5406b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [7d0b80a888cd2686a3db8241dd41cc28, quit {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.154, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\V-RKAM~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60704}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60704/devtoo..., se:cdpVersion: 139.0.7258.154, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 7d0b80a888cd2686a3db8241dd41cc28]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: Timed out waiting for driver server to stop.
-Build info: version: '4.11.0', revision: '040bc5406b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [7d0b80a888cd2686a3db8241dd41cc28, quit {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.154, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\V-RKAM~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60704}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60704/devtoo..., se:cdpVersion: 139.0.7258.154, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 7d0b80a888cd2686a3db8241dd41cc28
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:161)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
-at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:433)
-at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:351)
-at OG_image.BaseTest.afterTest(BaseTest.java:92)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:657)
-at org.testng.TestRunner.afterRun(TestRunner.java:845)
-at org.testng.TestRunner.run(TestRunner.java:618)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: java.util.concurrent.ExecutionException: org.openqa.selenium.TimeoutException: Process timed out after waiting for 20000 ms.
-Build info: version: '4.11.0', revision: '040bc5406b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
-Driver info: driver.version: unknown
-at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
-at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:157)
-... 22 more
-Caused by: org.openqa.selenium.TimeoutException: Process timed out after waiting for 20000 ms.
-Build info: version: '4.11.0', revision: '040bc5406b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
-Driver info: driver.version: unknown
-at org.openqa.selenium.os.OsProcess.waitFor(OsProcess.java:183)
-at org.openqa.selenium.os.CommandLine.waitFor(CommandLine.java:117)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$2(DriverCommandExecutor.java:148)
-at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
-... 3 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:OG_image.ScrappersTwitter@41c2284a]" started-at="2025-11-16T10:22:18 IST" name="afterTest" finished-at="2025-11-16T10:22:18 IST" duration-ms="204" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- OG_image.ScrappersTwitter -->
     </test> <!-- ScrapperTests1 -->
-    <test started-at="2025-09-02T23:26:01 IST" name="ScrapperTests2" finished-at="2025-09-02T23:26:21 IST" duration-ms="20608">
+    <test started-at="2025-11-16T10:22:18 IST" name="ScrapperTests2" finished-at="2025-11-16T10:22:30 IST" duration-ms="11683">
       <class name="OG_image.ScrappersLinkedIn">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:OG_image.ScrappersLinkedIn@5f683daf]" started-at="2025-09-02T23:25:31 IST" name="beforeSuite" finished-at="2025-09-02T23:25:31 IST" duration-ms="265" status="PASS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:OG_image.ScrappersLinkedIn@4a668b6e]" started-at="2025-11-16T10:21:45 IST" name="beforeSuite" finished-at="2025-11-16T10:21:45 IST" duration-ms="319" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:OG_image.ScrappersLinkedIn@5f683daf]" started-at="2025-09-02T23:26:01 IST" name="beforeTest" finished-at="2025-09-02T23:26:02 IST" duration-ms="1475" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:OG_image.ScrappersLinkedIn@4a668b6e]" started-at="2025-11-16T10:22:18 IST" name="beforeTest" finished-at="2025-11-16T10:22:19 IST" duration-ms="621" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="LikedInLanding()[pri:0, instance:OG_image.ScrappersLinkedIn@5f683daf]" started-at="2025-09-02T23:26:02 IST" name="LikedInLanding" finished-at="2025-09-02T23:26:14 IST" duration-ms="11880" status="PASS">
+        <test-method signature="LikedInLanding()[pri:0, instance:OG_image.ScrappersLinkedIn@4a668b6e]" started-at="2025-11-16T10:22:19 IST" name="LikedInLanding" finished-at="2025-11-16T10:22:26 IST" duration-ms="7571" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LikedInLanding -->
-        <test-method signature="LinkedInPostInception(java.lang.String)[pri:0, instance:OG_image.ScrappersLinkedIn@5f683daf]" started-at="2025-09-02T23:26:14 IST" name="LinkedInPostInception" data-provider="needTotestUrls" finished-at="2025-09-02T23:26:18 IST" depends-on-methods="OG_image.ScrappersLinkedIn.LikedInLanding" duration-ms="3971" status="PASS">
+        <test-method signature="LinkedInPostInception(java.lang.String)[pri:0, instance:OG_image.ScrappersLinkedIn@4a668b6e]" started-at="2025-11-16T10:22:26 IST" name="LinkedInPostInception" data-provider="needTotestUrls" finished-at="2025-11-16T10:22:29 IST" depends-on-methods="OG_image.ScrappersLinkedIn.LikedInLanding" duration-ms="3253" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[https://www.microsoft.com/en-us/store/collections/surfaceproaccessories]]>
+                <![CDATA[https://www.microsoft.com/en-us/windows/extended-security-updates]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LinkedInPostInception -->
-        <test-method signature="LinkedInPostInception(java.lang.String)[pri:0, instance:OG_image.ScrappersLinkedIn@5f683daf]" started-at="2025-09-02T23:26:18 IST" name="LinkedInPostInception" data-provider="needTotestUrls" finished-at="2025-09-02T23:26:20 IST" depends-on-methods="OG_image.ScrappersLinkedIn.LikedInLanding" duration-ms="2382" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://www.microsoft.com/en-us/store/collections/surfaceproaccessories]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LinkedInPostInception -->
-        <test-method signature="logLastLine()[pri:0, instance:OG_image.ScrappersLinkedIn@5f683daf]" started-at="2025-09-02T23:26:20 IST" name="logLastLine" finished-at="2025-09-02T23:26:20 IST" depends-on-methods="OG_image.ScrappersLinkedIn.LinkedInPostInception" duration-ms="2" status="PASS">
+        <test-method signature="logLastLine()[pri:0, instance:OG_image.ScrappersLinkedIn@4a668b6e]" started-at="2025-11-16T10:22:29 IST" name="logLastLine" finished-at="2025-11-16T10:22:29 IST" depends-on-methods="OG_image.ScrappersLinkedIn.LinkedInPostInception" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logLastLine -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:OG_image.ScrappersLinkedIn@5f683daf]" started-at="2025-09-02T23:26:20 IST" name="afterTest" finished-at="2025-09-02T23:26:21 IST" duration-ms="844" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:OG_image.ScrappersLinkedIn@4a668b6e]" started-at="2025-11-16T10:22:29 IST" name="afterTest" finished-at="2025-11-16T10:22:30 IST" duration-ms="207" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:OG_image.ScrappersLinkedIn@5f683daf]" started-at="2025-09-02T23:26:21 IST" name="afterSuite" finished-at="2025-09-02T23:26:23 IST" duration-ms="1484" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:OG_image.ScrappersLinkedIn@4a668b6e]" started-at="2025-11-16T10:22:30 IST" name="afterSuite" finished-at="2025-11-16T10:22:30 IST" duration-ms="281" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->

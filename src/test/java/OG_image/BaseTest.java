@@ -6,8 +6,8 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import AbstarctComponents.Log;
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.testng.annotations.*;
 
 import java.awt.*;
@@ -52,7 +52,7 @@ public class BaseTest extends EmailConfig {
 		    e.printStackTrace();
 		}
 		
-		ChromeOptions options = new ChromeOptions();
+		EdgeOptions options = new EdgeOptions();
 
 		// Stealth options
 		options.addArguments("--disable-blink-features=AutomationControlled");
@@ -70,9 +70,9 @@ public class BaseTest extends EmailConfig {
 
 		options.addArguments("start-maximized");
 		
-		//System.setProperty("webdriver.edge.driver", "C:\\Users\\v-rkammili\\Downloads\\edgedriver_win64\\msedgedriver.exe");
+		System.setProperty("webdriver.edge.driver", "C:\\Users\\MKTtools\\Downloads\\edgedriver_win64\\msedgedriver.exe");
 
-		WebDriver driver = new ChromeDriver(options);
+		WebDriver driver = new EdgeDriver(options);
 		((JavascriptExecutor) driver).executeScript(
 			    "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
 			);
@@ -99,13 +99,6 @@ public class BaseTest extends EmailConfig {
 		// sparkReporter.config().setOfflineMode(true);
 		reports.attachReporter(sparkReporter);
 
-//		String css = new String(Files.readAllBytes(Paths.get("./src/test/resources/extent.css")),
-//				StandardCharsets.UTF_8);
-//		String js = new String(Files.readAllBytes(Paths.get("./src/test/resources/custom.js")), StandardCharsets.UTF_8);
-		
-//		sparkReporter.config().setCss(css);
-//		sparkReporter.config().setJs(js);
-
 		reports.setSystemInfo("OS", System.getProperty("os.name"));
 		reports.setSystemInfo("java", System.getProperty("java.version"));
 		System.out.println("Before suite");
@@ -115,7 +108,7 @@ public class BaseTest extends EmailConfig {
 	@AfterSuite
 	public void afterSuite() throws IOException {
 		reports.flush();
-		Desktop.getDesktop().browse(new File("static/index.html").toURI());
+		//Desktop.getDesktop().browse(new File("static/index.html").toURI());
 		tdriver.remove();
 		//EmailConfig.sendEmail();
 		System.out.println("After suite");
